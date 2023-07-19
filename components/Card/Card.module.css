@@ -1,0 +1,30 @@
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.pictureContainer {
+    width: 100%;
+    padding: 16px 5px;
+    display: flex;
+    justify-content: center;
+    background-color: #77858f;
+    border-radius: 6px;
+}
+
+.picture {
+    width: 90%;
+    height: auto;
+}
+
+.cardTitle {
+    color: #77858f;
+    font-size: 18px;
+    margin-top: 10px;
+}

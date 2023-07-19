@@ -1,0 +1,171 @@
+.detailContainer {
+    background-color: #77858f;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px 20px;
+}
+
+.detail {
+    width: 70%;
+    height: 40vh;
+    display: flex;
+    margin-top: 8vh;
+}
+
+.pictureContainer {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture {
+    width: 80%;
+    height: auto;
+}
+
+.info {
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.size {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.quantity {
+    font-size: 20px;
+}
+
+.wppButton {
+    background-color: #61C1AA;
+    border: none;
+    border-radius: 6px;
+    height: 45px;
+    padding: 0 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.wppButton:hover {
+    background-color: #5ab39e;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+@media (min-width: 360px) {
+    .detail {
+        width: 100%;
+        flex-direction: column;
+        margin-top: 0;
+        height: fit-content;
+    }
+    .pictureContainer {
+        width: 100%;
+    }
+    .picture {
+        width: 100%;
+    }
+    .wppButton {
+        margin-top: 30px;
+    }
+}
+
+@media (min-width: 768px) {
+    .detail {
+        width: 100%;
+        flex-direction: column;
+        margin-top: 0;
+        height: fit-content;
+    }
+    .pictureContainer {
+        width: 100%;
+    }
+    .picture {
+        width: 80%;
+    }
+    .wppButton {
+        margin-top: 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .detail {
+        flex-direction: row;
+        margin-top: 8vh;
+        width: 70%;
+    }
+    .pictureContainer {
+        width: 50%;
+    }
+    .picture {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .detail {
+        width: 60%;
+    }
+    .picture {
+        width: 90%;
+    }
+}
+
+@media (min-width: 1360px) {
+    .detail {
+        width: 60%;
+    }
+    .picture {
+        width: 90%;
+    }
+    .wppButton {
+        margin-top: 60px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .detail {
+        width: 60%;
+    }
+    .picture {
+        width: 90%;
+    }
+    .wppButton {
+        margin-top: 80px;
+    }
+}
+
+
+@media (min-width: 1920px) {
+    .detail {
+        width: 50%;
+    }
+    .picture {
+        width: 90%;
+    }
+    .wppButton {
+        margin-top: 80px;
+    }
+}

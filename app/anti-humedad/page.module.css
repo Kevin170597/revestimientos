@@ -1,0 +1,58 @@
+.antiHumidity {
+    background-color: #77858f;
+    min-height: 85vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.cardsList {
+    width: 40%;
+    height: fit-content;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+@media (min-width: 360px) {
+    .cardsList {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .cardsList {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .cardsList {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .cardsList {
+        width: 40%;
+    }
+}
+
+@media (min-width: 1360px) {
+    .cardsList {
+        width: 35%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .cardsList {
+        width: 35%;
+    }
+}
+
+@media (min-width: 1920px) {
+    .cardsList {
+        width: 30%;
+    }
+}

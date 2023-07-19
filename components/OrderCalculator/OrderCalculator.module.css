@@ -1,0 +1,62 @@
+.counter {
+    display: flex;
+    align-items: center;
+}
+
+.subtract {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    margin-right: 14px;
+    cursor: pointer;
+    color: #969696;
+}
+
+.add {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    margin-left: 14px;
+    cursor: pointer;
+    color: #969696;
+}
+
+.m2Counter {
+    font-size: 24px;
+}
+
+.total {
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+.wppOrder {
+    background-color: #61C1AA;
+    border: none;
+    border-radius: 6px;
+    height: 45px;
+    padding: 0 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.icon {
+    margin-right: 10px;
+}
