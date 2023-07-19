@@ -13,7 +13,7 @@ export default function AntiHumidity() {
         <div className={styles.antiHumidity}>
             <div className={styles.cardsList}>
                 {antiHumidity.map((e) =>
-                    <Card placa={e} />
+                    <Card placa={e} key={e.id} />
                 )}
             </div>
         </div>
