@@ -10,7 +10,7 @@
 }
 
 .thumbnailContainer {
-    background-color: #5f6876;
+    background-color: #677377;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,8 +26,9 @@
 }
 
 .pictureContainer {
-    background-color: #5f6876;
-    width: 85%;
+    background-color: #677377;
+    width: 80%;
+    aspect-ratio: 1;
     display: flex;
     justify-content: center;
     align-items: center;

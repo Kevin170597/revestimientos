@@ -14,8 +14,9 @@ export default function Display({ img }: Pictures) {
     return (
         <div className={styles.display}>
             <div className={styles.selector}>
-                {img.map((e) =>
+                {img.map((e, i) =>
                     <div
+                        key={i}
                         className={styles.thumbnailContainer}
                         onMouseEnter={() => setImage(e)}
                         style={{border: image === e ? "solid 3px #fff" : ""}}
