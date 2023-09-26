@@ -1,0 +1,39 @@
+.display {
+    display: flex;
+}
+
+.selector {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.thumbnailContainer {
+    background-color: #5f6876;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 10px 0;
+    width: 70%;
+    aspect-ratio: 1;
+    cursor: pointer;
+}
+
+.thumbnail {
+    width: 80%;
+    height: auto;
+}
+
+.pictureContainer {
+    background-color: #5f6876;
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture {
+    width: 80%;
+    height: auto;
+}
