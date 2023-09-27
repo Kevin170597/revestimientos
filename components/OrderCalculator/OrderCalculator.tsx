@@ -7,10 +7,12 @@ import WhatsAppIcon from "../../public/icons/wppicon.svg"
 interface Props {
     price: number,
     antiHumidity: {
-        id: number,
+        _id: string,
         name: string,
         image: string,
-        slug: string
+        slug: string,
+        size: string,
+        price: number
     }
 }
 
@@ -40,7 +42,7 @@ export default function OrderCalculator({ price, antiHumidity }: Props) {
                 className={styles.wppOrder}
                 href={`https://wa.me/5491162087463?text=Hola, necesito ${counter} m2 de placas antihumedad modelo ${antiHumidity.name}.`}
                 target="_blank">
-                <Image 
+                <Image
                     src={WhatsAppIcon}
                     width={18}
                     height={18}
