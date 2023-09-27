@@ -7,8 +7,8 @@ const fetchAntiHumidityBySlug = (slug: string) => {
     return getAntiHumidityBySlug(slug)
 }
 
-export default function Order({ params }: { params: { slug: string } }) {
-    const antiHumidityBySlug = fetchAntiHumidityBySlug(params.slug)
+export default async function Order({ params }: { params: { slug: string } }) {
+    const antiHumidityBySlug = await fetchAntiHumidityBySlug(params.slug)
 
     return (
         <div className={styles.orderContainer}>
