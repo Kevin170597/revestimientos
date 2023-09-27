@@ -8,7 +8,8 @@ interface Props {
     placa: {
         name: string,
         slug: string,
-        image: string
+        image: string,
+        price: number
     }
 }
 
@@ -27,7 +28,8 @@ export default function Card({ placa }: Props) {
                     alt="modelo"
                 />
             </div>
-            <b className={styles.cardTitle}>{placa.name}</b>
+            <h2 className={styles.cardTitle}>{placa.name}</h2>
+            <h1 className={styles.cardPrice}>${placa.price} m2</h1>
         </div>
     )
 }
