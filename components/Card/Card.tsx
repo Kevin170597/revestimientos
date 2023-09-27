@@ -24,7 +24,7 @@ export default function Card({ placa }: Props) {
                     width={0}
                     height={0}
                     sizes="100vw"
-                    src={placa.image}
+                    src={`/models/${placa.image}`}
                     alt="modelo"
                 />
             </div>
