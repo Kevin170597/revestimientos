@@ -7,8 +7,8 @@ const fetchAntiHumidity = () => {
     return getAntiHumidity()
 }
 
-export default function AntiHumidity() {
-    const antiHumidity = fetchAntiHumidity()
+export default async function AntiHumidity() {
+    const antiHumidity = await fetchAntiHumidity()
 
     return (
         <div className={styles.antiHumidity}>
@@ -21,8 +21,8 @@ export default function AntiHumidity() {
                 alt="portada"
             />
             <div className={styles.cardsList}>
-                {antiHumidity.map((e) =>
-                    <Card placa={e} key={e.id} />
+                {antiHumidity?.map((e) =>
+                    <Card placa={e} key={e._id} />
                 )}
             </div>
         </div>
