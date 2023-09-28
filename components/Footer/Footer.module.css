@@ -1,0 +1,46 @@
+.footer {
+    background-color: #77858f;
+    border-top: solid 1px #97a1a8;
+    box-sizing: border-box;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+.mediaIcon {
+    margin-right: 20px;
+}
+
+.contactData {
+    margin-bottom: 20px;
+}
+
+.input {
+    background: none;
+    border: solid 1px #97a1a8;
+    border-radius: 20px;
+    height: 40px;
+    padding: 0 10px;
+    margin-right: 10px;
+}
+
+.input::placeholder {
+    color: #c7d0d7;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.sendButton {
+    background: none;
+    border: none;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #97a1a8;
+    padding: 0 20px;
+}
