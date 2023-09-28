@@ -5,6 +5,7 @@
     height: 15vh;
     padding: 0 50px;
     background-color: #77858f;
+    border-bottom: solid 1px #97a1a8;
 }
 
 .siteName {
