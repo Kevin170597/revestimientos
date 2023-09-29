@@ -7,7 +7,7 @@ import { Footer } from '@/components/Footer/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Placas antihumedad',
+  title: 'Kaliza',
   description: 'Venta de placas antihumedad.',
   icons: {
     icon: { url: "/favicon.png", type: "image/png" }

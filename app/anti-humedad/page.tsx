@@ -1,7 +1,12 @@
 import styles from "./page.module.css"
 import Card from "@/components/Card/Card"
 import Image from "next/image"
+import type { Metadata } from 'next'
 import { getAntiHumidity } from "./services/anti-humedad.service"
+
+export const metadata: Metadata = {
+    title: 'Kaliza - Placas antihumedad'
+}
 
 const fetchAntiHumidity = () => {
     return getAntiHumidity()
@@ -13,7 +18,7 @@ export default async function AntiHumidity() {
     return (
         <div className={styles.antiHumidity}>
             <Image
-            className={styles.cover}
+                className={styles.cover}
                 width={0}
                 height={0}
                 sizes="100vw"

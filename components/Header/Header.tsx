@@ -21,7 +21,7 @@ export default function Header() {
                         src="/logo_v1white.png"
                         alt="logo"
                     />
-                    <h2>Revestimientos</h2>
+                    <h2>Kaliza</h2>
                 </Link>
             </div>
             <div className={styles.mediaLinks}>
