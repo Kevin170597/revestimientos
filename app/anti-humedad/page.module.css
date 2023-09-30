@@ -4,10 +4,44 @@
     padding: 0 0 20px 0;
 }
 
-.cover {
-    width: 100%;
-    height: auto;
+@keyframes cover {
+    from {
+        height: 30vh;
+        opacity: 0;
+    }
+
+    to {
+        height: 40vh;
+        opacity: 1;
+    }
+}
+
+.coverContainer {
+    background-image: url("/cover-antihumedad2.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
     margin-bottom: 20px;
+    animation-name: cover;
+    animation-duration: 1s;
+}
+
+@keyframes titleAnimation {
+    from {
+        margin-left: 300px;
+    }
+
+    to {
+        margin-left: 0;
+    }
+}
+
+.title {
+    font-size: 40px;
+    animation-name: titleAnimation;
+    animation-duration: 1s;
 }
 
 .cardsList {
