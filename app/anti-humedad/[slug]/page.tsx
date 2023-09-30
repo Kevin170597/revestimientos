@@ -4,7 +4,7 @@ import Link from "next/link"
 import { Metadata } from "next"
 import styles from "./page.module.css"
 import WhatsAppIcon from "../../../public/icons/wppicon.svg"
-import { getAntiHumidityBySlug } from "../services/anti-humedad.service"
+import { getAntiHumidityBySlug } from "@/services/antihumedad.service"
 import Display from "@/components/Display/Display"
 
 const fetchAntiHumidityBySlug = (slug: string) => {
