@@ -1,7 +1,7 @@
-import { getAntiHumidityBySlug } from "../../services/anti-humedad.service"
+import { getAntiHumidityBySlug } from "@/services"
 import styles from "./page.module.css"
 import Image from "next/image"
-import OrderCalculator from "@/components/OrderCalculator/OrderCalculator"
+import { OrderCalculator } from "@/components"
 
 const fetchAntiHumidityBySlug = (slug: string) => {
     return getAntiHumidityBySlug(slug)

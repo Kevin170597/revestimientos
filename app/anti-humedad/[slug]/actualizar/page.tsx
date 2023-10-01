@@ -1,7 +1,6 @@
 import styles from "./page.module.css"
-import { getAntiHumidityBySlug } from "@/services/antihumedad.service"
-import { UpdateForm } from "@/components/UpdateForm/UpdateForm"
-import { updateAntihumidity } from "@/services/antihumedad.service"
+import { getAntiHumidityBySlug } from "@/services"
+import { UpdateForm } from "@/components"
 
 const fetchAntihumidityBySlug = (slug: string) => {
     return getAntiHumidityBySlug(slug)

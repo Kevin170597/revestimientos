@@ -2,15 +2,7 @@
 
 import { AntiHumedadModel } from "@/models/anti-humedad"
 import { dbConnect } from "@/lib/db"
-
-interface AntiHumedad {
-    _id: string,
-    name: string,
-    image: string,
-    slug: string,
-    size: string,
-    price: number
-}
+import { AntiHumedad } from "@/interfaces"
 
 export const getAntiHumidity = async () => {
     try {

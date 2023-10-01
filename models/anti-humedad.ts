@@ -1,13 +1,5 @@
 import { Schema, model, models } from "mongoose"
-
-interface AntiHumedad {
-    _id: string,
-    name: string,
-    image: string,
-    slug: string,
-    size: string,
-    price: number
-}
+import { AntiHumedad } from "@/interfaces"
 
 const AntiHumedadSchema = new Schema<AntiHumedad>(
     {

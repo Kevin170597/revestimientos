@@ -3,20 +3,14 @@ import { useState, Fragment } from "react"
 import styles from "./OrderCalculator.module.css"
 import Image from "next/image"
 import WhatsAppIcon from "../../public/icons/wppicon.svg"
+import { AntiHumedad } from "@/interfaces"
 
 interface Props {
     price: number,
-    antiHumidity: {
-        _id: string,
-        name: string,
-        image: string,
-        slug: string,
-        size: string,
-        price: number
-    }
+    antiHumidity: AntiHumedad
 }
 
-export default function OrderCalculator({ price, antiHumidity }: Props) {
+export const OrderCalculator = ({ price, antiHumidity }: Props) => {
     const [counter, setCounter] = useState<number>(1)
 
     return (

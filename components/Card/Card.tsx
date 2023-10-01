@@ -3,17 +3,13 @@
 import { useRouter } from "next/navigation"
 import Image from "next/image"
 import styles from "./Card.module.css"
+import { AntiHumedad } from "@/interfaces"
 
 interface Props {
-    placa: {
-        name: string,
-        slug: string,
-        image: string,
-        price: number
-    }
+    placa: AntiHumedad
 }
 
-export default function Card({ placa }: Props) {
+export const Card = ({ placa }: Props) => {
     const router = useRouter()
 
     return (
