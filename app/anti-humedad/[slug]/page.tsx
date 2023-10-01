@@ -30,8 +30,8 @@ export default async function Placa({ params }: { params: { slug: string } }) {
                     <h2 className={styles.name}>Placa antihumedad</h2>
                     <h3 className={styles.title}>Modelo: {antiHumidityBySlug?.name}</h3>
                     <p className={styles.price}>${antiHumidityBySlug?.price} m2</p>
-                    <p className={styles.size}>Medidas: {antiHumidityBySlug?.size}</p>
-                    <p className={styles.quantity}>Unidades por m2: 8</p>
+                    <p className={styles.size}>Medidas: {antiHumidityBySlug?.width}cm x {antiHumidityBySlug?.height}cm</p>
+                    <p className={styles.quantity}>Unidades por m2: {antiHumidityBySlug?.uxm2}</p>
                     <Link
                         className={styles.wppButton}
                         href={`/anti-humedad/${params.slug}/pedir`}>

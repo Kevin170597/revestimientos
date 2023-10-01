@@ -31,3 +31,28 @@
     background-color: #4d917d;
     cursor: pointer;
 }
+
+.sizesContainer {
+    display: flex;
+    margin: 10px 0;
+}
+
+.width {
+    display: flex;
+    align-items: center;
+}
+
+.height {
+    display: flex;
+    align-items: center;
+}
+
+.sizeInput {
+    margin: 0 6px 0 0;
+    width: 60px;
+}
+
+.cm {
+    margin-right: 6px;
+    color: #d2d2d2;
+}

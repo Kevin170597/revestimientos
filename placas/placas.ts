@@ -3,7 +3,6 @@ interface Placas {
     name: string,
     image: string,
     slug: string,
-    size: string,
     price: number
 }
 
@@ -13,7 +12,6 @@ export const placas: Placas[] = [
         name: "Mar del Plata",
         image: "/models/mardelplata.png",
         slug: "mardelplata",
-        size: "48cm x 25cm",
         price: 1800
     },
     {
@@ -21,7 +19,6 @@ export const placas: Placas[] = [
         name: "Sol",
         image: "/models/sol.png",
         slug: "sol",
-        size: "48cm x 26cm",
         price: 1800
     },
     {
@@ -29,7 +26,6 @@ export const placas: Placas[] = [
         name: "Travertino",
         image: "/models/travertino.png",
         slug: "travertino",
-        size: "50cm x 25cm",
         price: 1800
     },
     {
@@ -37,7 +33,6 @@ export const placas: Placas[] = [
         name: "Mármol",
         image: "/models/marmol.png",
         slug: "marmol",
-        size: "50cm x 26cm",
         price: 1800
     }
 ]

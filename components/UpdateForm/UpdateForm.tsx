@@ -7,9 +7,11 @@ import { AntiHumedad } from "@/interfaces"
 
 type Inputs = {
     name: string,
+    width: number,
+    height: number,
+    uxm2: number,
     price: number,
-    size: string,
-    uxm2: number
+    discount: number
 }
 
 interface Props {
@@ -42,19 +44,38 @@ export const UpdateForm = ({ placa }: Props) => {
                 {...register("price", { required: true })}
             />
             {errors.price && <span>Price is required</span>}
-            <label className={styles.label} htmlFor="size">Medidas</label>
+            <label className={styles.label} htmlFor="discount">Descuento</label>
             <input
-                id="size"
+                id="discount"
                 className={styles.input}
-                defaultValue={placa.size}
-                {...register("size", { required: true })}
+                defaultValue={placa.discount}
+                {...register("discount", { required: true })}
             />
-            {errors.size && <span>Size is required</span>}
+            {errors.price && <span>Price is required</span>}
+            <label className={styles.label}>Medidas</label>
+            <div className={styles.sizesContainer}>
+                <div className={styles.width}>
+                    <input
+                        className={`${styles.input} ${styles.sizeInput}`}
+                        defaultValue={placa.width}
+                        {...register("width", { required: true })}
+                    />
+                    <p className={styles.cm}>cm x</p>
+                </div>
+                <div className={styles.height}>
+                    <input
+                        className={`${styles.input} ${styles.sizeInput}`}
+                        defaultValue={placa.height}
+                        {...register("height", { required: true })}
+                    />
+                    <p className={styles.cm}>cm</p>
+                </div>
+            </div>
             <label className={styles.label} htmlFor="uxm2">Unidades por m2</label>
             <input
                 id="uxm2"
                 className={styles.input}
-                defaultValue={8}
+                defaultValue={placa.uxm2}
                 {...register("uxm2", { required: true })}
             />
             {errors.uxm2 && <span>UxM2 is required</span>}

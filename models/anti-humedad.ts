@@ -19,10 +19,26 @@ const AntiHumedadSchema = new Schema<AntiHumedad>(
             type: String,
             required: true
         },
+        width: {
+            type: Number,
+            required: true
+        },
+        height: {
+            type: Number,
+            required: true
+        },
         price: {
             type: Number,
             required: true
         },
+        discount: {
+            type: Number,
+            required: true
+        },
+        uxm2: {
+            type: Number,
+            required: true
+        }
     },
     {
         timestamps: true,

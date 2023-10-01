@@ -3,6 +3,9 @@ export interface AntiHumedad {
     name: string,
     image: string,
     slug: string,
-    size: string,
-    price: number
+    width: number,
+    height: number,
+    price: number,
+    discount: number,
+    uxm2: number
 }
