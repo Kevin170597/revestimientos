@@ -2,7 +2,8 @@
 
 import styles from "./UpdateForm.module.css"
 import { useForm, SubmitHandler } from "react-hook-form"
-import { updateAntihumidity } from "@/services/antihumedad.service"
+import { updateAntihumidity } from "@/services"
+import { AntiHumedad } from "@/interfaces"
 
 type Inputs = {
     name: string,
@@ -12,13 +13,7 @@ type Inputs = {
 }
 
 interface Props {
-    placa: {
-        name: string,
-        slug: string,
-        image: string,
-        price: number
-        size: string
-    }
+    placa: AntiHumedad
 }
 
 export const UpdateForm = ({ placa }: Props) => {

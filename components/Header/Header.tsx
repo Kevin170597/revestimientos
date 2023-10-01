@@ -6,7 +6,7 @@ import { FBIcon } from "../Icons/FBIcon"
 import { IGIcon } from "../Icons/IGIcon"
 import { WPPIcon } from "../Icons/WPPIcon"
 
-export default function Header() {
+export const Header = () => {
     return (
         <header className={styles.header}>
             <div className={styles.siteName}>

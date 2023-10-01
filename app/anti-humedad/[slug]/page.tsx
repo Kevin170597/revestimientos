@@ -1,11 +1,10 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { Metadata } from "next"
 import styles from "./page.module.css"
 import WhatsAppIcon from "../../../public/icons/wppicon.svg"
-import { getAntiHumidityBySlug } from "@/services/antihumedad.service"
-import Display from "@/components/Display/Display"
+import { getAntiHumidityBySlug } from "@/services"
+import { Display } from "@/components"
 
 const fetchAntiHumidityBySlug = (slug: string) => {
     return getAntiHumidityBySlug(slug)

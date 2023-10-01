@@ -7,7 +7,7 @@ interface Pictures {
     img: string[]
 }
 
-export default function Display({ img }: Pictures) {
+export const Display = ({ img }: Pictures) => {
 
     const [image, setImage] = useState<string>(img[0])
 

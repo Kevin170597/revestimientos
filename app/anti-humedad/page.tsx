@@ -1,7 +1,7 @@
 import styles from "./page.module.css"
-import Card from "@/components/Card/Card"
+import { Card } from "@/components"
 import type { Metadata } from 'next'
-import { getAntiHumidity } from "@/services/antihumedad.service"
+import { getAntiHumidity } from "@/services"
 
 export const metadata: Metadata = {
     title: 'Kaliza - Placas antihumedad'
