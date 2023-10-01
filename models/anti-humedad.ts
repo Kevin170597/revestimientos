@@ -15,10 +15,6 @@ const AntiHumedadSchema = new Schema<AntiHumedad>(
             type: String,
             required: true
         },
-        size: {
-            type: String,
-            required: true
-        },
         width: {
             type: Number,
             required: true
