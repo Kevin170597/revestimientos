@@ -25,7 +25,7 @@ export const Card = ({ placa }: Props) => {
                 />
             </div>
             <h2 className={styles.cardTitle}>{placa.name}</h2>
-            <h1 className={styles.cardPrice}>${placa.price} m2</h1>
+            <h1 className={styles.cardPrice}>${placa.price.toLocaleString("es-AR")} m2</h1>
         </div>
     )
 }

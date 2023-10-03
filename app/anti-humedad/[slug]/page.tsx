@@ -29,7 +29,7 @@ export default async function Placa({ params }: { params: { slug: string } }) {
                 <div className={styles.info}>
                     <h2 className={styles.name}>Placa antihumedad</h2>
                     <h3 className={styles.title}>Modelo: {antiHumidityBySlug?.name}</h3>
-                    <p className={styles.price}>${antiHumidityBySlug?.price} m2</p>
+                    <p className={styles.price}>${antiHumidityBySlug?.price.toLocaleString("es-AR")} m2</p>
                     <p className={styles.size}>Medidas: {antiHumidityBySlug?.width}cm x {antiHumidityBySlug?.height}cm</p>
                     <p className={styles.quantity}>Unidades por m2: {antiHumidityBySlug?.uxm2}</p>
                     <Link
