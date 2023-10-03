@@ -20,6 +20,10 @@ export const generateMetadata = async ({ params }: any) => {
 export default async function Placa({ params }: { params: { slug: string } }) {
     const antiHumidityBySlug = await fetchAntiHumidityBySlug(params.slug)
 
+    const priceWithDiscount = (price: number, discount: number) => {
+        return (price - (price * discount / 100))
+    }
+
     return (
         <div className={styles.detailContainer}>
             <div className={styles.detail}>
@@ -29,7 +33,19 @@ export default async function Placa({ params }: { params: { slug: string } }) {
                 <div className={styles.info}>
                     <h2 className={styles.name}>Placa antihumedad</h2>
                     <h3 className={styles.title}>Modelo: {antiHumidityBySlug?.name}</h3>
-                    <p className={styles.price}>${antiHumidityBySlug?.price.toLocaleString("es-AR")} m2</p>
+                    <p className={styles.undiscountedPrice}>
+                        {antiHumidityBySlug?.discount > 0 ? `$${antiHumidityBySlug?.price.toLocaleString("es-AR")}` : ""}
+                    </p>
+                    <div className={styles.priceContainer}>
+                        <p className={styles.price}>
+                            {antiHumidityBySlug?.discount > 0 ?
+                                `$${priceWithDiscount(antiHumidityBySlug?.price, antiHumidityBySlug?.discount).toLocaleString("es-AR")} m2`
+                                :
+                                `$${antiHumidityBySlug?.price.toLocaleString("es-AR")} m2`
+                            }
+                        </p>
+                        <p className={styles.discount}>{`${antiHumidityBySlug?.discount}% OFF`}</p>
+                    </div>
                     <p className={styles.size}>Medidas: {antiHumidityBySlug?.width}cm x {antiHumidityBySlug?.height}cm</p>
                     <p className={styles.quantity}>Unidades por m2: {antiHumidityBySlug?.uxm2}</p>
                     <Link
