@@ -7,3 +7,4 @@ export * from './Icons/IGIcon';
 export * from './Icons/WPPIcon';
 export * from './OrderCalculator/OrderCalculator';
 export * from './UpdateForm/UpdateForm';
+export * from "./AddClientEmailForm/AddClientEmailForm"

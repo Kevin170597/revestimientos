@@ -1,4 +1,4 @@
-import { getAntiHumidity } from "@/services";
+import { getAntiHumidity } from "@/services"
 
 export async function GET() {
     const antihumedad = await getAntiHumidity()

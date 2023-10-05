@@ -14,7 +14,6 @@ export async function GET(request: Request, { params }: { params: { slug: string
 
 export async function PUT(request: Request, { params }: { params: { slug: string } }) {
     const body = await request.json()
-    console.log(18, body)
     const res = await updateAntihumidity(params.slug, body)
     return new Response(JSON.stringify(res), { status: 200 })
 }

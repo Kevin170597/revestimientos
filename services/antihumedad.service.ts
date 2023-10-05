@@ -5,13 +5,9 @@ import { dbConnect } from "@/lib/db"
 import { AntiHumedad } from "@/interfaces"
 
 export const getAntiHumidity = async () => {
-    try {
-        await dbConnect()
-        const res = await AntiHumedadModel.find({})
-        return res
-    } catch (error) {
-        console.log(error)
-    }
+    await dbConnect()
+    const res = await AntiHumedadModel.find({})
+    return res
 }
 
 export const getAntiHumidityBySlug = async (slug: string): Promise<AntiHumedad> => {
@@ -23,6 +19,5 @@ export const getAntiHumidityBySlug = async (slug: string): Promise<AntiHumedad> 
 export const updateAntihumidity = async (slug: string, data: any) => {
     await dbConnect()
     const res = await AntiHumedadModel.updateOne({ slug }, data)
-    console.log(res)
     return res
 }
