@@ -22,7 +22,7 @@ export const AdminHeader = () => {
 
     return (
         <header className={styles.header}>
-            <h3>{convertPathName(pathname)}</h3>
+            <h4>{convertPathName(pathname)}</h4>
         </header>
     )
 }

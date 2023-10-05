@@ -1,33 +1,53 @@
 .clientes {
-    padding: 16px;
+    padding: 24px 8%;
 }
 
 .listHeader {
     display: flex;
     align-items: center;
     padding: 0 16px;
-    height: 35px;
-    border-bottom: solid 1px #c6c6c6;
+    margin-bottom: 20px;
+    height: 45px;
     color: #787878;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.14);
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.14);
+    -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.14);
+}
+
+.clientList {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.14);
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.14);
+    -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.14);
 }
 
 .client {
     display: flex;
     align-items: center;
     padding: 0 16px;
-    height: 35px;
-    border-bottom: solid 1px #c6c6c6;
+    height: 45px;
+    border-bottom: solid 1px #dddddd;
     color: #575757;
+}
+
+.client:hover {
+    background-color: #f7f7f7;
 }
 
 .clientName {
     width: 25%;
+    font-size: 14px;
 }
 
 .clientEmail {
     width: 25%;
+    font-size: 14px;
 }
 
 .clientPhone {
     width: 25%;
+    font-size: 14px;
 }

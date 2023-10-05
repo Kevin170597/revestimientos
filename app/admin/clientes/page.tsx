@@ -10,15 +10,15 @@ export default async function Clientes() {
 
     return (
         <div className={styles.clientes}>
-            <div>
-                <div className={styles.listHeader}>
-                    <b className={styles.clientName}>Nombre</b>
-                    <b className={styles.clientEmail}>Email</b>
-                    <b className={styles.clientPhone}>Teléfono</b>
-                </div>
+            <div className={styles.listHeader}>
+                <p className={styles.clientName}>Nombre</p>
+                <p className={styles.clientEmail}>Email</p>
+                <p className={styles.clientPhone}>Teléfono</p>
+            </div>
+            <div className={styles.clientList}>
                 {clients?.map((client) =>
                     <div className={styles.client} key={client._id}>
-                        <b className={styles.clientName}>{client.name}</b>
+                        <p className={styles.clientName}>{client.name}</p>
                         <p className={styles.clientEmail}>{client.email}</p>
                         <p className={styles.clientPhone}>{client.phone}</p>
                     </div>
