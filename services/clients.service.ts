@@ -15,3 +15,9 @@ export const addClient = async (client: Clients) => {
     const res = await ClientsModel.create(client)
     return res
 }
+
+export const deleteClient = async (_id: string) => {
+    await dbConnect()
+    const res = await ClientsModel.deleteOne({ _id })
+    return res
+}
