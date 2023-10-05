@@ -1,0 +1,8 @@
+.container {
+    display: flex;
+}
+
+.panel {
+    width: 100%;
+    background-color: #dbdbdb;
+}
