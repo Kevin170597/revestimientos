@@ -1,13 +1,12 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import { Header, Footer } from '@/components'
+import "./globals.css"
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: 'Kaliza',
-  description: 'Venta de placas antihumedad.',
+  title: "Kaliza",
+  description: "Venta de placas antihumedad.",
   icons: {
     icon: { url: "/favicon.png", type: "image/png" }
   }
@@ -21,9 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
         {children}
-        <Footer />
       </body>
     </html>
   )

@@ -2,7 +2,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import styles from "./page.module.css"
-import WhatsAppIcon from "../../../public/icons/wppicon.svg"
+import WhatsAppIcon from "../../../../public/icons/wppicon.svg"
 import { getAntiHumidityBySlug } from "@/services"
 import { Display } from "@/components"
 
