@@ -1,7 +1,7 @@
 import { Schema, model, models } from "mongoose"
-import { ClientsEmails } from "@/interfaces"
+import { Clients } from "@/interfaces"
 
-const ClientsEmailsSchema = new Schema<ClientsEmails>(
+const ClientsSchema = new Schema<Clients>(
     {
         name: {
             type: String,
@@ -10,13 +10,17 @@ const ClientsEmailsSchema = new Schema<ClientsEmails>(
         email: {
             type: String,
             required: true
+        },
+        phone: {
+            type: Number,
+            required: true
         }
     },
     {
         timestamps: true,
         versionKey: false,
-        collection: "clients-emails"
+        collection: "clients"
     }
 )
 
-export const ClientsEmailsModel = models["clients-emails"] || model("clients-emails", ClientsEmailsSchema)
+export const ClientsModel = models["clients"] || model("clients", ClientsSchema)

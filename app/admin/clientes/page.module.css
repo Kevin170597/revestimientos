@@ -1,0 +1,33 @@
+.clientes {
+    padding: 16px;
+}
+
+.listHeader {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    height: 35px;
+    border-bottom: solid 1px #c6c6c6;
+    color: #787878;
+}
+
+.client {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    height: 35px;
+    border-bottom: solid 1px #c6c6c6;
+    color: #575757;
+}
+
+.clientName {
+    width: 25%;
+}
+
+.clientEmail {
+    width: 25%;
+}
+
+.clientPhone {
+    width: 25%;
+}

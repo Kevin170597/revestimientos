@@ -11,7 +11,7 @@ export const Header = () => {
         <header className={styles.header}>
             <div className={styles.siteName}>
                 <Link
-                    href={"/"}
+                    href={"/tienda"}
                     className={styles.homeLink}
                 >
                     <Image

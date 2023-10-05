@@ -17,7 +17,7 @@ export const Card = ({ placa }: Props) => {
     }
 
     return (
-        <div className={styles.card} onClick={() => router.push(`/anti-humedad/${placa.slug}`)}>
+        <div className={styles.card} onClick={() => router.push(`/tienda/anti-humedad/${placa.slug}`)}>
             <div className={styles.pictureContainer}>
                 <Image
                     className={styles.picture}
