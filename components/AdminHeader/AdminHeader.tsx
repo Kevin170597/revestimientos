@@ -14,6 +14,14 @@ export const AdminHeader = () => {
             {
                 path: "/admin",
                 title: "Dashboard"
+            },
+            {
+                path: "/admin/actividad",
+                title: "Actividad"
+            },
+            {
+                path: "/admin/clientes/agregar",
+                title: "Guardar datos de cliente"
             }
         ]
 

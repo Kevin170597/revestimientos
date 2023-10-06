@@ -1,5 +1,11 @@
 import styles from "./page.module.css"
 import { getClients } from "@/services"
+import Link from "next/link"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+    title: "Clientes"
+}
 
 const fetchClients = () => {
     return getClients()
@@ -10,6 +16,9 @@ export default async function Clientes() {
 
     return (
         <div className={styles.clientes}>
+            <div>
+                <Link className={styles.addClientButton} href={"/admin/clientes/agregar"}>Agregar cliente +</Link>
+            </div>
             <div className={styles.listHeader}>
                 <p className={styles.clientName}>Nombre</p>
                 <p className={styles.clientEmail}>Email</p>

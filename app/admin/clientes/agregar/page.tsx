@@ -9,8 +9,7 @@ export const metadata: Metadata = {
 export default function ClientEmail() {
 
     return (
-        <div className={styles.addClientEmail}>
-            <h3 className={styles.title}>Guardar Email</h3>
+        <div className={styles.addClient}>
             <AddClientEmailForm />
         </div>
     )

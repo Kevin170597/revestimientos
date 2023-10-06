@@ -2,11 +2,22 @@
     padding: 24px 8%;
 }
 
+.addClientButton {
+    background-color: #95a2ab;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 40px;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
 .listHeader {
     display: flex;
     align-items: center;
     padding: 0 16px;
-    margin-bottom: 20px;
+    margin: 16px 0 20px 0;
     height: 45px;
     color: #787878;
     background-color: #fff;
