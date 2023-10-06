@@ -7,6 +7,6 @@ export * from "./Icons/IGIcon";
 export * from "./Icons/WPPIcon";
 export * from "./OrderCalculator/OrderCalculator";
 export * from "./UpdateForm/UpdateForm";
-export * from "./AddClientEmailForm/AddClientEmailForm"
+export * from "./AddClientForm/AddClientForm"
 export * from "./SideBar/SideBar"
 export * from "./AdminHeader/AdminHeader"

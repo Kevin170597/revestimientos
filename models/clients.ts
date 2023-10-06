@@ -9,11 +9,9 @@ const ClientsSchema = new Schema<Clients>(
         },
         email: {
             type: String,
-            required: true
         },
         phone: {
             type: Number,
-            required: true
         }
     },
     {

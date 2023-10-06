@@ -1,5 +1,5 @@
 import styles from "./page.module.css"
-import { AddClientEmailForm } from "@/components"
+import { AddClientForm } from "@/components"
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -10,7 +10,7 @@ export default function ClientEmail() {
 
     return (
         <div className={styles.addClient}>
-            <AddClientEmailForm />
+            <AddClientForm />
         </div>
     )
 }

@@ -1,6 +1,8 @@
 "use client"
-import styles from "./AddClientEmailFrom.module.css"
+import styles from "./AddClientFrom.module.css"
 import { useForm, SubmitHandler } from "react-hook-form"
+import { addClient } from "@/services"
+import { useRouter } from "next/navigation"
 
 type Inputs = {
     name: string,
@@ -8,12 +10,15 @@ type Inputs = {
     phone: number
 }
 
-export const AddClientEmailForm = () => {
+export const AddClientForm = () => {
+    const router = useRouter()
 
     const { register, handleSubmit, formState: { errors } } = useForm<Inputs>()
 
     const onSubmit: SubmitHandler<Inputs> = async (data) => {
         console.log(data)
+        await addClient(data)
+        router.push("/admin/clientes")
     }
 
     return (
