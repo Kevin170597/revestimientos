@@ -32,9 +32,9 @@ export const SideBar = () => {
                 Tienda
             </Link>
             <Link
-                className={`${styles.link} ${pathname === "/admin/actividad" ? styles.active : ""}`}
-                href={"/admin/actividad"}>
-                Actividad
+                className={`${styles.link} ${pathname.includes("/admin/caja-registradora") ? styles.active : ""}`}
+                href={"/admin/caja-registradora"}>
+                Caja registradora
             </Link>
             <Link
                 className={`${styles.link} ${pathname.includes("/admin/clientes") ? styles.active : ""}`}

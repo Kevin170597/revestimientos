@@ -20,8 +20,12 @@ export const AdminHeader = () => {
                 title: "Dashboard"
             },
             {
-                path: "/admin/actividad",
-                title: "Actividad"
+                path: "/admin/caja-registradora",
+                title: "Caja registradora"
+            },
+            {
+                path: "/admin/caja-registradora/registrar",
+                title: "Registrar compra/venta"
             },
             {
                 path: "/admin/tienda",

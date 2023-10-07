@@ -10,3 +10,4 @@ export * from "./UpdateForm/UpdateForm";
 export * from "./AddClientForm/AddClientForm"
 export * from "./SideBar/SideBar"
 export * from "./AdminHeader/AdminHeader"
+export * from "./AddCashRegisterForm/AddCashRegisterForm"
