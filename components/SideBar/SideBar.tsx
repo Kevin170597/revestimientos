@@ -27,6 +27,11 @@ export const SideBar = () => {
                 Dashboard
             </Link>
             <Link
+                className={`${styles.link} ${pathname === "/admin/tienda" ? styles.active : ""}`}
+                href={"/admin/tienda"}>
+                Tienda
+            </Link>
+            <Link
                 className={`${styles.link} ${pathname === "/admin/actividad" ? styles.active : ""}`}
                 href={"/admin/actividad"}>
                 Actividad

@@ -12,6 +12,10 @@ export const AdminHeader = () => {
                 title: "Clientes"
             },
             {
+                path: "/admin/clientes/agregar",
+                title: "Guardar datos de cliente"
+            },
+            {
                 path: "/admin",
                 title: "Dashboard"
             },
@@ -20,8 +24,8 @@ export const AdminHeader = () => {
                 title: "Actividad"
             },
             {
-                path: "/admin/clientes/agregar",
-                title: "Guardar datos de cliente"
+                path: "/admin/tienda",
+                title: "Tienda"
             }
         ]
 

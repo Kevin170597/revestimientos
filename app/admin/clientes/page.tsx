@@ -28,8 +28,8 @@ export default async function Clientes() {
                 {clients?.map((client) =>
                     <div className={styles.client} key={client._id}>
                         <p className={styles.clientName}>{client.name}</p>
-                        <p className={styles.clientEmail}>{client.email}</p>
-                        <p className={styles.clientPhone}>{client.phone}</p>
+                        <p className={styles.clientEmail}>{client.email ? client.email : "-"}</p>
+                        <p className={styles.clientPhone}>{client.phone ? client.phone : "-"}</p>
                     </div>
                 )}
             </div>
