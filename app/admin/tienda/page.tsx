@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     title: "Tienda"
 }
 
-export default function () {
+export default function Store () {
 
     return (
         <div className={styles.tienda}>
