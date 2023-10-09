@@ -1,6 +1,6 @@
 import styles from "./page.module.css"
 import type { Metadata } from "next"
-import { getAllRegister } from "@/services"
+import { getAllRegister, getBalance } from "@/services"
 import Link from "next/link"
 
 export const metadata: Metadata = {
@@ -11,13 +11,25 @@ const fetchAllRegister = async () => {
     return getAllRegister()
 }
 
+const fetchBalance = async () => {
+    return getBalance()
+}
+
 export default async function CashRegister() {
     const cashRegister = await fetchAllRegister()
+    const balance = await fetchBalance()
 
     return (
         <div className={styles.cashRegister}>
             <div className={styles.balance}>
-                <Link href={"/admin/caja-registradora/registrar"}>Registrar compra/venta</Link>
+                <h1>Compra ${balance.buy.toLocaleString("es-AR")}</h1>
+                <h1>Venta ${balance.sell.toLocaleString("es-AR")}</h1>
+                <h1>Balance ${balance.balance.toLocaleString("es-AR")}</h1>
+                <Link
+                    className={styles.goToRegisterForm}
+                    href={"/admin/caja-registradora/registrar"}>
+                    Registrar compra/venta
+                </Link>
             </div>
 
             <div className={styles.activity}>

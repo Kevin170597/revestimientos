@@ -2,6 +2,7 @@
 import styles from "./AddCashRegisterForm.module.css"
 import { useForm, SubmitHandler } from "react-hook-form"
 import { addRegister } from "@/services"
+import { useRouter } from "next/navigation"
 
 type Inputs = {
     type: "buy" | "sell",
@@ -14,6 +15,7 @@ type Inputs = {
 }
 
 export const AddCashRegisterForm = () => {
+    const router = useRouter()
 
     const { register, handleSubmit, formState: { errors } } = useForm<Inputs>()
 
@@ -22,6 +24,7 @@ export const AddCashRegisterForm = () => {
         data.usd_amount = 0
         data.usd_blue = 0
         await addRegister(data)
+        router.push("/admin/caja-registradora")
     }
 
     return (

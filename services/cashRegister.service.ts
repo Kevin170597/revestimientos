@@ -4,27 +4,29 @@
 import { CashRegisterModel } from "@/models"
 import { dbConnect } from "@/lib/db"
 import { CashRegister } from "@/interfaces"
+import { getDollarBlue } from "@/utils"
 
 export const getRegister = async () => {
 
 }
 
-export const getAllRegister = async () => {
+export const getAllRegister = async (): Promise<CashRegister[]> => {
     await dbConnect()
     const res = await CashRegisterModel.find({})
     return res
 }
 
-const fetchDollar = async () => {
-    const req = await fetch("https://api.bluelytics.com.ar/v2/latest")
-    const res = await req.json()
-    console.log(res.blue.value_avg)
-    return res.blue.value_avg
+export const getBalance = async (): Promise<{ buy: number, sell: number, balance: number }> => {
+    const register = await getAllRegister()
+    let buy: number = 0
+    let sell: number = 0
+    register.map((e) => e.type === "buy" ? buy = buy + e.amount : sell = sell + e.amount)
+    return { buy, sell, balance: (buy - sell) }
 }
 
 export const addRegister = async (register: CashRegister) => {
     await dbConnect()
-    const blue = await fetchDollar()
+    const blue = await getDollarBlue()
     register.usd_blue = blue
     register.usd_amount = Number((register.amount / blue).toFixed(2))
     const res = await CashRegisterModel.create(register)
