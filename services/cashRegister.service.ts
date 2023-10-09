@@ -21,7 +21,7 @@ export const getBalance = async (): Promise<{ buy: number, sell: number, balance
     let buy: number = 0
     let sell: number = 0
     register.map((e) => e.type === "buy" ? buy = buy + e.amount : sell = sell + e.amount)
-    return { buy, sell, balance: (buy - sell) }
+    return { buy, sell, balance: (sell - buy) }
 }
 
 export const addRegister = async (register: CashRegister) => {

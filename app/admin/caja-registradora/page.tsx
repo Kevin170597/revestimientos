@@ -2,6 +2,7 @@ import styles from "./page.module.css"
 import type { Metadata } from "next"
 import { getAllRegister, getBalance } from "@/services"
 import Link from "next/link"
+import { DonutChart } from "@/components"
 
 export const metadata: Metadata = {
     title: "Caja registradora"
@@ -22,9 +23,21 @@ export default async function CashRegister() {
     return (
         <div className={styles.cashRegister}>
             <div className={styles.balance}>
-                <h1>Compra ${balance.buy.toLocaleString("es-AR")}</h1>
-                <h1>Venta ${balance.sell.toLocaleString("es-AR")}</h1>
-                <h1>Balance ${balance.balance.toLocaleString("es-AR")}</h1>
+                <div className={styles.balanceInfo}>
+                    <DonutChart
+                        data={[{ value: balance.sell, color: "#2de39a" },
+                        { value: balance.buy, color: "#e8681d" }]}
+                    />
+                    <div className={styles.balanceNumbers}>
+                        <p className={styles.title}>Compra</p>
+                        <p className={styles.buyValue}>${balance.buy.toLocaleString("es-AR")}</p>
+                        <p className={styles.title}>Venta</p>
+                        <p className={styles.sellValue}>${balance.sell.toLocaleString("es-AR")}</p>
+                        <h1 className={balance.balance > 0 ? styles.balanceResultPositive : styles.balanceResultNegative}>
+                            {balance.balance > 0 ? "+" : "-"}${balance.balance.toLocaleString("es-AR")}
+                        </h1>
+                    </div>
+                </div>
                 <Link
                     className={styles.goToRegisterForm}
                     href={"/admin/caja-registradora/registrar"}>
