@@ -2,6 +2,11 @@
     padding: 24px 8%;
 }
 
+.clientsActions {
+    display: flex;
+    justify-content: space-between;
+}
+
 .addClientButton {
     background-color: #95a2ab;
     display: flex;
