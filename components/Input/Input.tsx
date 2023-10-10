@@ -2,7 +2,7 @@ import styles from "./Input.module.css"
 
 interface Props {
     label?: string,
-    inputType?: "text" | "number",
+    inputType?: string,
     placeholder?: string,
     register?: any,
     required?: boolean,

@@ -1,6 +1,7 @@
 import styles from "./Select.module.css"
 
 interface Props {
+    inputType?: string,
     label?: string,
     symbol?: string,
     register?: any,

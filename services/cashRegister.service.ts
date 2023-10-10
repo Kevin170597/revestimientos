@@ -25,6 +25,7 @@ export const getBalance = async (): Promise<{ buy: number, sell: number, balance
 }
 
 export const addRegister = async (register: CashRegister) => {
+    console.log(28, " here")
     await dbConnect()
     const blue = await getDollarBlue()
     register.usd_blue = blue

@@ -1,6 +1,3 @@
 .addClient {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 24px;
+    padding: 24px 20%;
 }

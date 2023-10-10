@@ -1,10 +1,25 @@
 .cashRegister {
     padding: 24px 2%;
+    height: 92vh;
+    overflow-y: auto;
     color: #575757;
     font-size: 14px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+}
+
+.cashRegister::-webkit-scrollbar {
+    width: 16px;
+}
+
+.cashRegister::-webkit-scrollbar-track {
+    background: #b9b9b9;
+}
+
+.cashRegister::-webkit-scrollbar-thumb {
+    background: #77858f;
+    border-radius: 12px;
 }
 
 .balance {
