@@ -24,6 +24,17 @@ export const getBalance = async (): Promise<{ buy: number, sell: number, balance
     return { buy, sell, balance: (sell - buy) }
 }
 
+export const getBalanceUSD = async (): Promise<{ buy: number, sell: number, balance: number }> => {
+    const register = await getAllRegister()
+    let buy: number = 0
+    let sell: number = 0
+    register.map((e) => {
+        if(e.usd_amount && e.usd_blue)
+        e.type === "buy" ? buy = buy + e.usd_amount : sell = sell + e.usd_amount
+    })
+    return { buy: Number(buy.toFixed(2)), sell: Number(sell.toFixed(2)), balance: Number((sell - buy).toFixed(2)) }
+}
+
 export const addRegister = async (register: CashRegister) => {
     console.log(28, " here")
     await dbConnect()
