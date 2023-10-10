@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { getAllRegister, getBalance } from "@/services"
 import Link from "next/link"
 import { DonutChart } from "@/components"
+import moment from "moment"
 
 export const metadata: Metadata = {
     title: "Caja registradora"
@@ -34,7 +35,7 @@ export default async function CashRegister() {
                         <p className={styles.title}>Venta</p>
                         <p className={styles.sellValue}>${balance.sell.toLocaleString("es-AR")}</p>
                         <h1 className={balance.balance > 0 ? styles.balanceResultPositive : styles.balanceResultNegative}>
-                            {balance.balance > 0 ? "+" : "-"}${balance.balance.toLocaleString("es-AR")}
+                            {balance.balance > 0 ? "+" : "-"}${Math.abs(balance.balance).toLocaleString("es-AR")}
                         </h1>
                     </div>
                 </div>
@@ -59,7 +60,7 @@ export default async function CashRegister() {
                                 </p>
                             </div>
                             <div className={styles.extra}>
-                                <p>19/07/23</p>
+                                <p>{moment(e.createdAt).format("D/M/YY")}</p>
                                 <p>USD ${e.usd_amount} (${e.usd_blue}/$1)</p>
                             </div>
                         </div>

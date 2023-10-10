@@ -6,5 +6,6 @@ export interface CashRegister {
     unit: string,
     amount: number,
     usd_amount?: number,
-    usd_blue?: number
+    usd_blue?: number,
+    createdAt?: string
 }

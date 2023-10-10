@@ -29,6 +29,7 @@ export default function AddRegister() {
                 { optionValue: "Placas antihumedad", optionLabel: "Placas antihumedad" },
                 { optionValue: "Yeso cerámico 40kg", optionLabel: "Yeso cerámico 40kg" },
                 { optionValue: "Sella juntas 20kg", optionLabel: "Sella juntas 20kg" },
+                { optionValue: "Sella juntas 4kg", optionLabel: "Sella juntas 4kg" },
                 { optionValue: "Pegamento 30kg", optionLabel: "Pegamento 30kg" }
             ]
         },
