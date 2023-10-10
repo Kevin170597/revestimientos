@@ -1,5 +1,5 @@
 import styles from "./page.module.css"
-import { AddClientForm, Form } from "@/components"
+import { Form } from "@/components"
 import type { Metadata } from 'next'
 import { addClient } from "@/services"
 
