@@ -2,21 +2,23 @@ import styles from "./page.module.css"
 import { getClients } from "@/services"
 import Link from "next/link"
 import type { Metadata } from "next"
+import { SearchInput } from "@/components"
 
 export const metadata: Metadata = {
     title: "Clientes"
 }
 
-const fetchClients = () => {
-    return getClients()
+const fetchClients = (params?: string) => {
+    return getClients(params)
 }
 
-export default async function Clientes() {
-    const clients = await fetchClients()
+export default async function Clientes({ params, searchParams }: { params?: {}, searchParams?: { key: string }}) {
+    const clients = await fetchClients(searchParams?.key)
 
     return (
         <div className={styles.clientes}>
-            <div>
+            <div className={styles.clientsActions}>
+                <SearchInput />
                 <Link className={styles.addClientButton} href={"/admin/clientes/agregar"}>Agregar cliente +</Link>
             </div>
             <div className={styles.listHeader}>

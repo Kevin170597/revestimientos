@@ -14,3 +14,5 @@ export * from "./DonutChart/DonutChart"
 export * from "./Input/Input"
 export * from "./Select/Select"
 export * from "./Form/Form"
+
+export * from "./SearchInput/SearchInput"
