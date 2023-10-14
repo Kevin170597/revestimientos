@@ -1,6 +1,12 @@
 import { getAntiHumidity } from "@/services"
+import { Res, ResError } from "@/lib"
 
 export async function GET() {
-    const antihumedad = await getAntiHumidity()
-    return new Response(JSON.stringify(antihumedad))
+    try {
+        const res = await getAntiHumidity()
+        return Res(res, 200)
+    } catch (error) {
+        const { message } = error as Error
+        return ResError(message, 500)
+    }
 }

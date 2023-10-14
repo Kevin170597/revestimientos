@@ -1,19 +1,24 @@
 import { getAntiHumidityBySlug, updateAntihumidity } from "@/services"
+import { Res, ResError } from "@/lib"
 
 export async function GET(request: Request, { params }: { params: { slug: string } }) {
     try {
         const res = await getAntiHumidityBySlug(params.slug)
-        if (res === undefined) throw new Error("Not found.")
-        return new Response(JSON.stringify(res), { status: 200 })
+        if (res === undefined) return ResError("not found", 404)
+        return Res(res, 200)
     } catch (error) {
-        let message
-        if (error instanceof Error) message = error.message
-        return new Response(JSON.stringify({ error: message }), { status: 404 })
+        const { message } = error as Error
+        return ResError(message, 500)
     }
 }
 
 export async function PUT(request: Request, { params }: { params: { slug: string } }) {
-    const body = await request.json()
-    const res = await updateAntihumidity(params.slug, body)
-    return new Response(JSON.stringify(res), { status: 200 })
+    try {
+        const body = await request.json()
+        const res = await updateAntihumidity(params.slug, body)
+        return Res(res, 200)
+    } catch (error) {
+        const { message } = error as Error
+        return ResError(message, 500)
+    }
 }
