@@ -2,9 +2,8 @@
 "use server"
 
 import { CashRegisterModel } from "@/models"
-import { dbConnect } from "@/lib/db"
 import { CashRegister } from "@/interfaces"
-import { getDollarBlue } from "@/utils"
+import { dbConnect, getDollarBlue } from "@/lib"
 
 export const getRegister = async () => {
 
