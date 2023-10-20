@@ -1,6 +1,4 @@
 "use client"
-
-import styles from "./SideBar.module.css"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
@@ -9,10 +7,10 @@ export const SideBar = () => {
     const pathname = usePathname()
 
     return (
-        <nav className={styles.nav}>
-            <div className={styles.logoContainer}>
+        <nav className="bg-primary h-[100vh] w-[25vw] py-4">
+            <div className="flex items-center px-4 mb-6">
                 <Image
-                    className={styles.logo}
+                    className="rounded-full mr-4"
                     width={30}
                     height={30}
                     src="/logo_v1white.png"
@@ -21,23 +19,23 @@ export const SideBar = () => {
                 <h3>Kaliza</h3>
             </div>
             <Link
-                className={`${styles.link} ${pathname === "/admin" ? styles.active : ""}`}
+                className={`mb-2 px-4 h-10 flex items-center ${pathname === "/admin" ? "border-white border-r-4 border-solid bg-primary-light" : ""}`}
                 href={"/admin"}
             >
                 Dashboard
             </Link>
             <Link
-                className={`${styles.link} ${pathname === "/admin/tienda" ? styles.active : ""}`}
+                className={`$mb-2 px-4 h-10 flex items-center ${pathname === "/admin/tienda" ? "border-white border-r-4 border-solid bg-primary-light" : ""}`}
                 href={"/admin/tienda"}>
                 Tienda
             </Link>
             <Link
-                className={`${styles.link} ${pathname.includes("/admin/caja-registradora") ? styles.active : ""}`}
+                className={`$mb-2 px-4 h-10 flex items-center ${pathname.includes("/admin/caja-registradora") ? "border-white border-r-4 border-solid bg-primary-light" : ""}`}
                 href={"/admin/caja-registradora"}>
                 Caja registradora
             </Link>
             <Link
-                className={`${styles.link} ${pathname.includes("/admin/clientes") ? styles.active : ""}`}
+                className={`mb-2 px-4 h-10 flex items-center ${pathname.includes("/admin/clientes") ? "border-white border-r-4 border-solid bg-primary-light" : ""}`}
                 href={"/admin/clientes"}>
                 Clientes
             </Link>

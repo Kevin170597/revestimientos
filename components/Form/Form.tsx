@@ -1,5 +1,4 @@
 "use client"
-import styles from "./Form.module.css"
 import { Input } from "../Input/Input"
 import { Select } from "../Select/Select"
 import { useForm, SubmitHandler } from "react-hook-form"
@@ -47,7 +46,7 @@ export const Form = (props: Props) => {
     }
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+        <form onSubmit={handleSubmit(onSubmit)} className="p-6 bg-white rounded shadow-1 flex flex-col">
             {fields?.map((field, index) => {
                 if (field.type === "input") {
                     return <Input
@@ -73,7 +72,7 @@ export const Form = (props: Props) => {
                     />
                 }
             })}
-            <input className={styles.submitButton} type="submit" />
+            <input className="h-10 rounded bg-primary cursor-pointer" type="submit" />
         </form>
     )
 }

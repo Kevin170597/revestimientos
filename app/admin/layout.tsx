@@ -1,5 +1,4 @@
 import type { Metadata } from "next"
-import styles from "./layout.module.css"
 import { SideBar, AdminHeader } from "@/components"
 
 export const metadata: Metadata = {
@@ -9,9 +8,9 @@ export const metadata: Metadata = {
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
 
     return (
-        <div className={styles.container}>
+        <div className="flex">
             <SideBar />
-            <div className={styles.panel}>
+            <div className="w-full bg-bg-1">
                 <AdminHeader />
                 {children}
             </div>

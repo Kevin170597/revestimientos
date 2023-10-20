@@ -1,7 +1,6 @@
 "use client"
 import { usePathname } from "next/navigation"
-import styles from "./AdminHeader.module.css"
-import { signIn, signOut, useSession } from "next-auth/react"
+import { signOut, useSession } from "next-auth/react"
 
 export const AdminHeader = () => {
     const pathname = usePathname()
@@ -39,12 +38,18 @@ export const AdminHeader = () => {
     }
 
     return (
-        <header className={styles.header}>
+        <header className="bg-primary h-[8vh] flex justify-between items-center px-6 shadow-1">
             <h4>{convertPathName(pathname)}</h4>
             {session?.user &&
-                <button onClick={() => signOut()} className={styles.profileButton}>
-                    <img className={styles.profilePicture} src={session?.user?.image as string} alt="profile" />
-                    <p className={styles.profileName}>{session?.user?.name}</p>
+                <button
+                    onClick={() => signOut()}
+                    className="flex items-center border rounded-full cursor-pointer h-10 p-1 gap-4 hover:bg-primary-light transition-colors duration-500">
+                    <img
+                        className="w-8 h-8 rounded-full"
+                        src={session?.user?.image as string}
+                        alt="profile"
+                    />
+                    <p className="mr-4">{session?.user?.name}</p>
                 </button>
             }
         </header>

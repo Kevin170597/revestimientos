@@ -67,7 +67,7 @@ export default function AddRegister() {
     ]
 
     return (
-        <div className={styles.cashRegister}>
+        <div className="py-6 px-[10%]">
             <Form
                 submitFunction={addRegister}
                 fields={registerFormFields}

@@ -1,4 +1,3 @@
-import styles from "./page.module.css"
 import type { Metadata } from "next"
 import { getAllRegister, getBalance, getBalanceUSD } from "@/services"
 import Link from "next/link"
@@ -27,12 +26,12 @@ export default async function CashRegister() {
     const balanceUSD = await fetchBalanceUSD()
 
     return (
-        <div className={styles.cashRegister}>
-            <div className={styles.balance}>
+        <div className="p-4 h-[92vh] text-sm flex items-start justify-between overflow-y-auto">
+            <div className="w-[48%] bg-white rounded shadow-1 p-4">
                 <Balance balance={balance} />
                 <Balance balance={balanceUSD} />
                 <Link
-                    className={styles.goToRegisterForm}
+                    className="bg-primary h-10 px-4 flex justify-center items-center rounded text-white"
                     href={"/admin/caja-registradora/registrar"}>
                     Registrar compra/venta
                 </Link>

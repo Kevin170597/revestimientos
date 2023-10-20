@@ -1,4 +1,3 @@
-import styles from "./page.module.css"
 import { Form } from "@/components"
 import type { Metadata } from 'next'
 import { addClient } from "@/services"
@@ -36,7 +35,7 @@ export default function ClientEmail() {
     ]
 
     return (
-        <div className={styles.addClient}>
+        <div className="py-6 px-[20%]">
             <Form 
                 submitFunction={addClient}
                 fields={clientsFormFields}
